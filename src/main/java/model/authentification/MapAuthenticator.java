@@ -13,20 +13,19 @@ public class MapAuthenticator extends Authenticator{
     }
 
     @Override
-    protected boolean isLoginExists(String username)
+    public boolean isLoginExists(String username)
     {
         return mapData.containsKey(username);
     }
 
     @Override
-    protected String getPassword(String username)
+    public String getPassword(String username)
     {
         return mapData.get(username);
     }
 
-
     @Override
-    protected boolean register(String username, String password) {
+    public boolean register(String username, String password) {
         if (!mapData.containsKey(username)) {
             mapData.put(username, password);
             return true;

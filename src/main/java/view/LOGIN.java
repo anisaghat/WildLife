@@ -1,73 +1,77 @@
 package view;
 
+import controller.controllerLOGIN;
+import model.authentification.MapAuthenticator;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class LOGIN  extends JDialog {
+public class LOGIN extends JDialog {
+
     private JPanel MainPanel;
     private JTextField usernameField;
-    private JTextField passwordField;
+    private JPasswordField passwordField;
     private JCheckBox newHereCheckBox;
     private JButton enterButton;
 
     public LOGIN() {
-        setContentPane(MainPanel);
+        initComponents();
         setTitle("Welcome to Wildlife");
         setModal(true);
-        //setResizable(false);
-
-        //initComponents();
         setSize(400,300);
-        //pack();
-        setLocationRelativeTo(null); // centre la fenêtre
-        setVisible(true);
+        setLocationRelativeTo(null);
+    }
+
+    public void addLoginListener(ActionListener listener) {
+        enterButton.addActionListener(listener);
+    }
+
+    public String getUsername() {
+        return usernameField.getText().trim();
+    }
+
+    public String getPassword() {
+        return new String(passwordField.getPassword()).trim();
+    }
+
+    public boolean getNew() {
+        return newHereCheckBox.isSelected();
+    }
+
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(this, message);
     }
 
     private void initComponents() {
-
-        JPanel mainPanel = new JPanel(new GridBagLayout());
+        MainPanel = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
 
-        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.insets = new Insets(10,10,10,10);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-
-        JLabel usernameLabel = new JLabel("Username:");
-        JLabel passwordLabel = new JLabel("Password:");
 
         usernameField = new JTextField(15);
         passwordField = new JPasswordField(15);
         newHereCheckBox = new JCheckBox("New here?");
         enterButton = new JButton("Enter application");
 
-        // Username
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        mainPanel.add(usernameLabel, gbc);
-
+        gbc.gridx = 0; gbc.gridy = 0;
+        MainPanel.add(new JLabel("Username:"), gbc);
         gbc.gridx = 1;
-        mainPanel.add(usernameField, gbc);
+        MainPanel.add(usernameField, gbc);
 
-        // Password
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        mainPanel.add(passwordLabel, gbc);
-
+        gbc.gridx = 0; gbc.gridy = 1;
+        MainPanel.add(new JLabel("Password:"), gbc);
         gbc.gridx = 1;
-        mainPanel.add(passwordField, gbc);
+        MainPanel.add(passwordField, gbc);
 
-        // Checkbox
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.gridwidth = 2;
-        mainPanel.add(newHereCheckBox, gbc);
+        gbc.gridx = 0; gbc.gridy = 2; gbc.gridwidth = 2;
+        MainPanel.add(newHereCheckBox, gbc);
 
-        // Button
         gbc.gridy = 3;
-        gbc.anchor = GridBagConstraints.CENTER;
-        mainPanel.add(enterButton, gbc);
+        MainPanel.add(enterButton, gbc);
 
-        setContentPane(mainPanel);
+        setContentPane(MainPanel);
     }
-
-
 }

@@ -1,10 +1,8 @@
-import view.LOGIN;
+import app.launchApplication;
+import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args)
-    {
-        LOGIN view = new LOGIN();
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new launchApplication().start());
     }
 }
-
-/////
