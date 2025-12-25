@@ -1,7 +1,7 @@
 package controller;
 
 import app.AppNavigator;
-import model.authentification.MapAuthenticator;
+import model.authentication.MapAuthenticator;
 import view.LOGIN;
 
 public class controllerLOGIN

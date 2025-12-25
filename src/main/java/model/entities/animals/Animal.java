@@ -81,4 +81,17 @@ public abstract class Animal
     public void setHabitat(Habitat habitat) {
         this.habitat = habitat;
     }
+
+    public String toString()
+    {
+        return "Animal{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", status=" + status +
+                ", habitat=" + habitat +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

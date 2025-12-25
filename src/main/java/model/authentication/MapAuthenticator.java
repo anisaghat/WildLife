@@ -1,4 +1,4 @@
-package model.authentification;
+package model.authentication;
 
 import java.util.HashMap;
 import java.util.Map;

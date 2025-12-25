@@ -39,4 +39,14 @@ public class Fish extends Animal {
         this.bones = bones;
         this.depth = depth;
     }
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Fish{" +
+                "typeOfWater='" + typeOfWater + '\'' +
+                ", bones='" + bones + '\'' +
+                ", depth='" + depth + '\'' +
+                '}';
+    }
+
 }

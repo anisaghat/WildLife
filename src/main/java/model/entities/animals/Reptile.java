@@ -29,4 +29,13 @@ public class Reptile extends Animal {
         this.reproduction = reproduction;
         this.venomous = venomous;
     }
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Reptile{" +
+                "reproduction='" + reproduction + '\'' +
+                ", venomous=" + venomous +
+                '}';
+    }
+
 }

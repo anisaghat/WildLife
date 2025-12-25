@@ -30,4 +30,13 @@ public class Bird extends Animal
         this.wingspan = wingspan;
         this.canFly = canFly;
     }
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Bird{" +
+                "wingspan=" + wingspan +
+                ", canFly=" + canFly +
+                '}';
+    }
+
 }

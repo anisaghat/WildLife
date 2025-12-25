@@ -26,6 +26,14 @@ public class Habitat {
         this.biome = biome;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Habitat{" +
+                "name='" + name + '\'' +
+                "," + super.toString();
+    }
+
 
 }
 

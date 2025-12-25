@@ -1,4 +1,4 @@
-package model.authentification;
+package model.authentication;
 
 public abstract class Authenticator {
     public final boolean authenticate(String username, String password) {
@@ -17,4 +17,4 @@ public abstract class Authenticator {
 }
 
 
-// ici ça utilise bien le patron Factory mais va relire pourquoi
+// ici ça utilise bien le patron Template Method mais va relire pourquoi

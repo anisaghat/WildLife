@@ -13,8 +13,6 @@ public class Amphibian extends Animal {
 
     private boolean metamorphose;
 
-
-
     public String getTypeRespiration() {
         return typeRespiration;
     }
@@ -45,4 +43,21 @@ public class Amphibian extends Animal {
         this.aquatique = aquatique;
         this.metamorphose = metamorphose;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Amphibian{" +
+                "typeRespiration='" + typeRespiration + '\'' +
+                ", aquatique=" + aquatique +
+                ", metamorphose=" + metamorphose +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        return false;
+    }
+
 }

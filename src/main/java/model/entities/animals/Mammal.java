@@ -19,4 +19,12 @@ public class Mammal extends Animal
         super(id, imagePath, name, height, weight, status, habitat, description);
         this.dureeGestation = dureeGestation;
     }
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Mammal{" +
+                "dureeGestation=" + dureeGestation +
+                '}';
+    }
+
 }

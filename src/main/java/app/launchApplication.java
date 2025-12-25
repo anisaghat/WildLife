@@ -1,7 +1,7 @@
 package app;
 
 import controller.controllerLOGIN;
-import model.authentification.MapAuthenticator;
+import model.authentication.MapAuthenticator;
 import view.LOGIN;
 
 public class launchApplication

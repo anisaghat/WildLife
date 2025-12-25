@@ -55,4 +55,16 @@ public class Biome {
         this.humidity = humidity;
         this.dominantVegetation = dominantVegetation;
     }
+
+    @Override
+    public String toString() {
+        return "Biome{" +
+                "name='" + name + '\'' +
+                ", temperature='" + temperature + '\'' +
+                ", humidity='" + humidity + '\'' +
+                ", dominantVegetation='" + dominantVegetation + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
 }
