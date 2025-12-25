@@ -39,4 +39,19 @@ public class Bird extends Animal
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Bird bird)) return false;
+
+        if (Float.compare(getWingspan(), bird.getWingspan()) != 0) return false;
+        return isCanFly() == bird.isCanFly();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (getWingspan() != 0.0f ? Float.floatToIntBits(getWingspan()) : 0);
+        result = 31 * result + (isCanFly() ? 1 : 0);
+        return result;
+    }
 }

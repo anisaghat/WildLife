@@ -27,4 +27,16 @@ public class Mammal extends Animal
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mammal mammal)) return false;
+
+        return Float.compare(getDureeGestation(), mammal.getDureeGestation()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return (getDureeGestation() != 0.0f ? Float.floatToIntBits(getDureeGestation()) : 0);
+    }
 }

@@ -1,5 +1,4 @@
 ***** TO DO *****
 
-méthode equals pour toutes les classes instanciables
-
 remplir les tests, j'ai juste generer mais rien écrit dedans
+

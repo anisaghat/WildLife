@@ -49,4 +49,22 @@ public class Fish extends Animal {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Fish fish)) return false;
+
+        if (getTypeOfWater() != null ? !getTypeOfWater().equals(fish.getTypeOfWater()) : fish.getTypeOfWater() != null)
+            return false;
+        if (getBones() != null ? !getBones().equals(fish.getBones()) : fish.getBones() != null) return false;
+        return getDepth() != null ? getDepth().equals(fish.getDepth()) : fish.getDepth() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getTypeOfWater() != null ? getTypeOfWater().hashCode() : 0;
+        result = 31 * result + (getBones() != null ? getBones().hashCode() : 0);
+        result = 31 * result + (getDepth() != null ? getDepth().hashCode() : 0);
+        return result;
+    }
 }

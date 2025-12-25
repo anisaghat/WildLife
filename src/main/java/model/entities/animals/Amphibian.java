@@ -3,6 +3,8 @@ package model.entities.animals;
 import model.entities.ExtinctionStatut;
 import model.entities.Habitat;
 
+import java.util.Objects;
+
 public class Amphibian extends Animal {
 
     // les amphibiens ont une double vie eau/terre
@@ -54,10 +56,11 @@ public class Amphibian extends Animal {
                 '}';
     }
 
-
     @Override
     public boolean equals(Object o) {
-        return false;
+        if (this == o) return true;
+        if (!(o instanceof Amphibian amphibian)) return false;
+        return isAquatique() == amphibian.isAquatique() && isMetamorphose() == amphibian.isMetamorphose() && Objects.equals(getTypeRespiration(), amphibian.getTypeRespiration());
     }
 
 }

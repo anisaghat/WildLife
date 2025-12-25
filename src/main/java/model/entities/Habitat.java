@@ -34,6 +34,20 @@ public class Habitat {
                 "," + super.toString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Habitat habitat)) return false;
 
+        if (getName() != null ? !getName().equals(habitat.getName()) : habitat.getName() != null) return false;
+        return getBiome() != null ? getBiome().equals(habitat.getBiome()) : habitat.getBiome() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getName() != null ? getName().hashCode() : 0;
+        result = 31 * result + (getBiome() != null ? getBiome().hashCode() : 0);
+        return result;
+    }
 }
 

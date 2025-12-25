@@ -67,4 +67,28 @@ public class Biome {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Biome biome)) return false;
+
+        if (getName() != null ? !getName().equals(biome.getName()) : biome.getName() != null) return false;
+        if (getDescription() != null ? !getDescription().equals(biome.getDescription()) : biome.getDescription() != null)
+            return false;
+        if (getTemperature() != null ? !getTemperature().equals(biome.getTemperature()) : biome.getTemperature() != null)
+            return false;
+        if (getHumidity() != null ? !getHumidity().equals(biome.getHumidity()) : biome.getHumidity() != null)
+            return false;
+        return getDominantVegetation() != null ? getDominantVegetation().equals(biome.getDominantVegetation()) : biome.getDominantVegetation() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getName() != null ? getName().hashCode() : 0;
+        result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
+        result = 31 * result + (getTemperature() != null ? getTemperature().hashCode() : 0);
+        result = 31 * result + (getHumidity() != null ? getHumidity().hashCode() : 0);
+        result = 31 * result + (getDominantVegetation() != null ? getDominantVegetation().hashCode() : 0);
+        return result;
+    }
 }

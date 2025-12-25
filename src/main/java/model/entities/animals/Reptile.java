@@ -38,4 +38,19 @@ public class Reptile extends Animal {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Reptile reptile)) return false;
+
+        if (isVenomous() != reptile.isVenomous()) return false;
+        return getReproduction() != null ? getReproduction().equals(reptile.getReproduction()) : reptile.getReproduction() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getReproduction() != null ? getReproduction().hashCode() : 0;
+        result = 31 * result + (isVenomous() ? 1 : 0);
+        return result;
+    }
 }
