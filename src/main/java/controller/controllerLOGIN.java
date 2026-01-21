@@ -4,6 +4,8 @@ import app.AppNavigator;
 import model.authentication.MapAuthenticator;
 import view.LOGIN;
 
+import java.util.Properties;
+
 public class controllerLOGIN
 {
     private LOGIN view ;
@@ -35,18 +37,25 @@ public class controllerLOGIN
                 navigator.showMainWindow();
             }
             else {
-                view.showMessage("account was not created... please try again");
+                view.showMessage("username already exists");
             }
         }
         else
         {
+            if(!model.isLoginExists(username))
+            {
+                view.showMessage("username does not exist. plz check the new user box");
+                return;
+            }
+
             if(model.authenticate(username,password))
             {
                 navigator.showMainWindow();
+                view.dispose();
             }
             else
             {
-                view.showMessage("login failed... please try again");
+                view.showMessage("password is incorrect");
             }
         }
     }

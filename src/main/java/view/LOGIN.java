@@ -3,6 +3,8 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import javafx.application.*;
+
 
 public class LOGIN extends JDialog {
 
@@ -43,6 +45,7 @@ public class LOGIN extends JDialog {
     private void initComponents() {
         MainPanel = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
+        //MainPanel.setForeground(Color.BLUE); ?? 
 
         gbc.insets = new Insets(10,10,10,10);
         gbc.fill = GridBagConstraints.HORIZONTAL;
