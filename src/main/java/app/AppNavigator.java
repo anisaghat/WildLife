@@ -2,6 +2,7 @@ package app;
 
 import controller.controllerLOGIN;
 import model.authentication.MapAuthenticator;
+import view.ADDANIMAL;
 import view.LOGIN;
 import view.MAINVIEW;
 
@@ -19,8 +20,14 @@ public class AppNavigator {
     }
 
     public void showMainWindow() {
-        MAINVIEW main = new MAINVIEW();
+        MAINVIEW main = new MAINVIEW(this);
         main.setVisible(true);
+    }
+
+    public void showAddAnimalForm()
+    {
+        ADDANIMAL form = new ADDANIMAL();
+        form.setVisible(true);
     }
 
 }
