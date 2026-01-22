@@ -13,7 +13,7 @@ public class AppNavigator {
         this.authenticator = authenticator;
     }
 
-    public void showLogin() {
+    public void showLogin() { // utile par exemple après la déconnexion pour re-afficher la login page mais pr l'instant elle me sert à rien en vrai
         LOGIN view = new LOGIN();
         new controllerLOGIN(view, authenticator, this);
         view.setVisible(true);

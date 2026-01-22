@@ -2,3 +2,8 @@
 
 remplir les tests, j'ai juste generer mais rien écrit dedans
 
+
+sauvegarder un animal mais pr ce faire d'abord
+faire les DAO du coup!!!!!
+gérer la connexion à la DB (presque fini mais regarde le fichier)
+faire du coup aussi 1 script de création de toutes les entités dans la bd (id auto increment) clé étrangère
