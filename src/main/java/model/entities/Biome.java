@@ -2,6 +2,7 @@ package model.entities;
 
 public class Biome {
 
+    private Integer id;
     private String name;
     private String description;
     private String temperature;
@@ -54,6 +55,14 @@ public class Biome {
         this.temperature = temperature;
         this.humidity = humidity;
         this.dominantVegetation = dominantVegetation;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     @Override

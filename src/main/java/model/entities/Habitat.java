@@ -2,6 +2,10 @@ package model.entities;
 
 public class Habitat {
 
+    private Integer id;
+
+
+
     private String name;
     private Biome biome;
 
@@ -20,6 +24,9 @@ public class Habitat {
     public void setBiome(Biome biome) {
         this.biome = biome;
     }
+    public Integer getId() { return id; }
+
+    public void setId(Integer n) { id = n; }
 
     public Habitat(String name, Biome biome) {
         this.name = name;

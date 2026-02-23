@@ -5,7 +5,7 @@ import model.entities.Habitat;
 
 public abstract class Animal
 {
-    private int id; // à auto incrément dans le base de donnée
+    private Integer id; // à auto incrément dans le base de donnée
     private String imagePath;
     private String name;
     private float height;
@@ -26,11 +26,11 @@ public abstract class Animal
         this.description = description;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
