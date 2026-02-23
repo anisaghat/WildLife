@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class connectDB
+public class ConnectDB
 {
     private static Connection conn = null;
 
-    public connectDB() {
+    public ConnectDB() {
         if (conn == null) {
             try {
 
