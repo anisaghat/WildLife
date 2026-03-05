@@ -8,7 +8,7 @@ public class ConnectDB
 {
     private static Connection conn = null;
 
-    public ConnectDB() {
+    /*public ConnectDB() {
         if (conn == null) {
             try {
 
@@ -39,5 +39,5 @@ public class ConnectDB
         } catch (SQLException e) {
             System.out.println("ERREUR : problème lors de la fermeture de la base de donnée");
         }
-    }
+    }*/
 }

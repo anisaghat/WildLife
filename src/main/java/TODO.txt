@@ -2,14 +2,16 @@
 
 remplir les tests, j'ai juste generer mais rien écrit dedans
 
-
-sauvegarder un animal mais pr ce faire d'abord
-faire les DAO du coup!!!!!
-
-
-
 DAO pour le couo je suis pas sure de comment ça marche parce que j'ai de l'héritage dans mes classes, du coup je sais pas si je dois faire un DAO pour chaque classe ou juste un seul DAO pour la classe parent et après les classes enfants vont hériter de ce DAO ou pas du tout, à voir
+
 
 
 gérer la connexion à la DB (presque fini mais regarde le fichier)
 faire du coup aussi 1 script de création de toutes les entités dans la bd (id auto increment) clé étrangère
+
+faire que quand on appuie sur la croix ça nous déconnecte de la session et nous redirige vers la page de login
+dans le login faudra aussi supprimer l'user de la map mais je suis pas sure : à vérifier
+
+DB c'est pas nécessaire : pr l'instant sauvegarder les données dans des fichiers csv
+
+UUID pour les id? à voir

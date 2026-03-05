@@ -23,7 +23,7 @@ public class MAINVIEW  extends JFrame {
         setSize(700,700);
 
         buttonAdd.addActionListener( e -> navigator.showAddAnimalForm());
-        buttonLogout.addActionListener( e -> { dispose(); System.exit(0);});
+        buttonLogout.addActionListener( e -> { dispose(); navigator.showLogin();});
     }
 
 }
